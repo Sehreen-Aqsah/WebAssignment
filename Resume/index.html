@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Akshata T Rathod - CSE Undergraduate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Left Section: Navigation -->
+        <div class="left-section">
+            <div class="logo">
+                <img src="download.jpg" alt="Profile Picture" class="circular-image">
+
+            </div>
+            <h1 >Akshata T Rathod</h1>
+            <p class="subtitle">CSE Undergraduate & Aspiring Software Engineer</p>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        
+        <!-- Right Section: Introduction -->
+        <div class="right-section">
+            <div class="content-wrapper">
+                <h2 id="typewriter"></h2>
+                <p>
+                    I'm a passionate Computer Science Engineering student learning Web development, Cyber Security, and Problem-solving. My goal is to contribute to groundbreaking technologies through research and innovation.
+                </p>
+                <button class="exploreResume"><a href="resume.html" style="text-decoration: none; color: white;">Explore My Resume</a></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("exploreResume").addEventListener("click", function () {
+    document.getElementById("resume").scrollIntoView({ behavior: "smooth" });
+});
+
+    </script>
+</body>
+</html>

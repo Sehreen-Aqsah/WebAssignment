@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Akshata T Rathod</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Left Section: Sidebar -->
+        <div class="left-section">
+            <h1>Resume</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html" class="active">Resume</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        
+        <!-- Right Section: Resume Details -->
+        <div class="right-section">
+            <div class="content-wrapper">
+                <h2>Education</h2>
+                <ul class="resume-list">
+                    <li>
+                        <h3>Jawaharlal Nehru New College Of Engineering, Shimoga</h3>
+                        <p>Bachelor of Engineering in Computer Science (CSE)</p>
+                        <p><strong>Year:</strong> 2022 - Present</p>
+                    </li>
+                    <li>
+                        <h3>PU Education(Science)</h3>
+                        <p>Sri Adichunchanagiri Independent PU College, Shimoga</p>
+                        <p><strong>Year:</strong> 2020 - 2022</p>
+                    </li>
+                </ul>
+
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li>Programming: Python, JavaScript, C++</li>
+                    <li>Web Development: HTML, CSS, JavaScript</li>
+                    <li>Algorithms and Data Structures</li>
+                    <li>CyberSecurity Basics</li>
+                </ul>
+
+                <h2>Projects</h2>
+                <ul class="resume-list">
+                    <li>
+                        <h3>Tourista: Your Travel Companion</h3>
+                        <p><strong>JNNCE</strong></p>
+                        <p>A travel guide that helps in smooth travelling.</p>
+                        <p><strong>Year:</strong> 2024 - Present</p>
+                    </li>
+                </ul>
+                <button id="downloadResume">Download Resume</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("downloadResume").addEventListener("click", function () {
+    // Create a new jsPDF instance
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Add text to the PDF
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(20);
+    doc.text("Akshata T Rathod", 10, 20);
+    doc.setFontSize(12);
+    doc.text("CSE Undergraduate", 10, 30);
+    doc.text("Email: akshatha@gmail.com", 10, 40);
+    doc.text("Phone: 123-456-7890", 10, 50);
+    doc.text("LinkedIn: linkedin.com/in/akshata", 10, 60);
+
+    doc.text("Education:", 10, 80);
+    doc.setFont("helvetica", "normal");
+    doc.text("B.E in Computer Science, JNNCE, Shimoga", 10, 90);
+
+    doc.text("Skills:", 10, 110);
+    doc.text("- JavaScript, Python, HTML, CSS", 10, 120);
+    doc.text("- Data Structures and Algorithms", 10, 130);
+
+    // Save the PDF
+    doc.save("Resume.pdf");
+});
+
+    </script>
+</body>
+</html>
