@@ -1,75 +1,99 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    color: #555;
 }
 
 .form-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f0f4f8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
-    font-size: 24px;
-    color: #333333;
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e88e5;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #1e88e5;
 }
 
 label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555555;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: left;
 }
 
 input, select, textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 14px;
+    background-color: #e1f5fe;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #1e88e5;
+    background-color: #ffffff;
+    outline: none;
 }
 
 textarea {
     resize: vertical;
+    min-height: 100px;
 }
 
 button {
-    background-color: #007BFF;
+    background-color: #1e88e5;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px;
     font-size: 16px;
-    border-radius: 4px;
+    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
     width: 100%;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #1565c0;
 }
 
 button:active {
-    background-color: #003f7f;
+    background-color: #0d47a1;
 }
 
 @media (max-width: 480px) {
     .form-container {
-        padding: 15px;
+        padding: 20px;
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 24px;
     }
 }
+
